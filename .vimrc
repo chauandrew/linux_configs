@@ -1,28 +1,17 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-" 
-" " set the runtime path to include Vundle and initialize
+set nocompatible
+filetype off
+" Set runtime path to include Vundle and initialize
 " set rtp+=~/.vim/bundle/Vundle.vim
 " call vundle#begin()
-" " let Vundle manage Vundle, required
+" 
+" " Let Vundle manage Vundle, required
 " Plugin 'VundleVim/Vundle.vim'
 " 
-" " Keep Plugin commands between vundle#begin/end.
-" " Plugin 'Valloric/YouCompleteMe' " commented b/c datasci03 doesn't have cmake installed
+" " Autocompletion plugin
+" Plugin 'Valloric/YouCompleteMe'
 " 
-" " All of your Plugins must be added before the following line
-" call vundle#end()            " required
-" filetype plugin indent on    " required
-
-"Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to  auto-approve removal
-
-" " see :h vundle for more details or wiki for FAQ
-" " Put your non-Plugin stuff after this line
+" call vundle#end()
+" filetype plugin indent on
 
 
 " Personal Settings
@@ -30,7 +19,7 @@ noremap <Space> <Nop>
 let mapleader=" "
 set number! relativenumber!
 syntax on
-colorscheme molokai
+colorscheme onedark
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -78,7 +67,7 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 1
 let g:netrw_browse_split = 4 
 let g:netrw_altv = 1
-let g:netrw_winsize = 15
+let g:netrw_winsize = 20 
 
 " etc
 set nowrap
