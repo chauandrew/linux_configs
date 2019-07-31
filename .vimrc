@@ -7,7 +7,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 "Plugin 'valloric/youcompleteme'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'ap/vim-buftabline'
+"Plugin 'ap/vim-buftabline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 "Plugin 'kien/ctrlp.vim'
@@ -80,4 +82,4 @@ set scrolloff=5
 set t_ut=""
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 let g:polyglot_disabled=['jsx']
-
+let g:airline_theme='onedark'
