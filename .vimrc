@@ -72,3 +72,4 @@ let g:netrw_winsize = 20
 " etc
 set nowrap
 set scrolloff=5
+:set t_ut=""
