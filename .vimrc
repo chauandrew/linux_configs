@@ -1,17 +1,20 @@
 set nocompatible
 filetype off
 " Set runtime path to include Vundle and initialize
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-" 
-" " Let Vundle manage Vundle, required
-" Plugin 'VundleVim/Vundle.vim'
-" 
-" " Autocompletion plugin
-" Plugin 'Valloric/YouCompleteMe'
-" 
-" call vundle#end()
-" filetype plugin indent on
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Autocompletion plugin
+Plugin 'Valloric/YouCompleteMe'
+
+" Syntax Highlighting
+Plugin 'sheerun/vim-polyglot'
+
+call vundle#end()
+filetype plugin indent on
 
 
 " Personal Settings
@@ -20,6 +23,8 @@ let mapleader=" "
 set number! relativenumber!
 syntax on
 colorscheme onedark
+" colorscheme molokai
+" colorscheme monokai
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -72,4 +77,4 @@ let g:netrw_winsize = 20
 " etc
 set nowrap
 set scrolloff=5
-:set t_ut=""
+set t_ut=""
