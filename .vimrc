@@ -13,6 +13,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Syntax Highlighting
 Plugin 'sheerun/vim-polyglot'
 
+" Display line
+Plugin 'vim-airline/vim-airline'
+
 call vundle#end()
 filetype plugin indent on
 
