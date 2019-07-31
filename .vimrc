@@ -4,21 +4,17 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" Autocompletion plugin
-Plugin 'Valloric/YouCompleteMe'
-
-" Syntax Highlighting
+"Plugin 'valloric/youcompleteme'
 Plugin 'sheerun/vim-polyglot'
-
-" Display line
-Plugin 'vim-airline/vim-airline'
+Plugin 'ap/vim-buftabline'
+"Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdcommenter'
+"Plugin 'kien/ctrlp.vim'
+Plugin 'yggdroot/indentline'
 
 call vundle#end()
 filetype plugin indent on
-
 
 " Personal Settings
 noremap <Space> <Nop>
@@ -26,14 +22,15 @@ let mapleader=" "
 set number! relativenumber!
 syntax on
 colorscheme onedark
-" colorscheme molokai
-" colorscheme monokai
+"colorscheme molokai
+"colorscheme monokai
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
 " ctrl+j/k moves lines up or down
 let g:C_Ctrl_j = 'off'
+let g:C_Ctrl_h = 'off'
 nnoremap <C-k> :move-2<CR>
 nnoremap <C-j> :move+1<CR> 
 " Insert mode
@@ -81,3 +78,6 @@ let g:netrw_winsize = 20
 set nowrap
 set scrolloff=5
 set t_ut=""
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+let g:polyglot_disabled=['jsx']
+
