@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
-" Set runtime path to include Vundle and initialize
+
+" Vundle / Plugin Stuff
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -17,6 +18,9 @@ Plugin 'yggdroot/indentline'
 
 call vundle#end()
 filetype plugin indent on
+
+let g:polyglot_disabled=['jsx']
+let g:airline_theme='onedark'
 
 " Personal Settings
 noremap <Space> <Nop>
@@ -81,5 +85,3 @@ set nowrap
 set scrolloff=5
 set t_ut=""
 nnoremap <silent> <C-l> :nohl<CR><C-l>
-let g:polyglot_disabled=['jsx']
-let g:airline_theme='onedark'
