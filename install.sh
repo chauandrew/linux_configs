@@ -1,9 +1,16 @@
 #!/bin/bash
 
-# Copy over all the files to home directory
-cat bashrc >> ~/.bashrc
-cat inputrc >> ~/.inputrc
-rm ~/.vimrc
+# Copy over all the files to home directory 
+if ! grep -q "# PERSONAL BASHRC CONFIGS:" ~/.bashrc
+then
+    echo "# PERSONAL BASHRC CONFIGS:" >> ~/.bashrc
+    cat bashrc >> ~/.bashrc
+fi
+if ! grep -q "# PERSONAL INPUTRC CONFIGS:" ~/.inputrc
+then
+    echo "# PERSONAL INPUTRC CONFIGS:" >> ~/.inputrc
+    cat inputrc >> ~/.inputrc
+fi
 cp vimrc ~/.vimrc
 cp -r .vim ~/.vim
 

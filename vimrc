@@ -11,9 +11,9 @@ Plugin 'sheerun/vim-polyglot'
 "Plugin 'ap/vim-buftabline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
-"Plugin 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'yggdroot/indentline'
 
 call vundle#end()
