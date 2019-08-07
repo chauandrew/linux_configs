@@ -1,17 +1,28 @@
 #!/bin/bash
 
-# Copy over all the files to home directory 
+# Append files to existing config files
+touch ~/.bashrc
 if ! grep -q "# PERSONAL BASHRC CONFIGS:" ~/.bashrc
 then
     echo "# PERSONAL BASHRC CONFIGS:" >> ~/.bashrc
     cat bashrc >> ~/.bashrc
+    echo "# END PERSONAL CONFIGS" >> ~/.bashrc
 fi
+touch ~/.inputrc
 if ! grep -q "# PERSONAL INPUTRC CONFIGS:" ~/.inputrc
 then
     echo "# PERSONAL INPUTRC CONFIGS:" >> ~/.inputrc
     cat inputrc >> ~/.inputrc
+    echo "# END PERSONAL CONFIGS" >> ~/.inputrc
 fi
-cp vimrc ~/.vimrc
+touch ~/.vimrc
+if ! grep -q "\" PERSONAL VIMRC CONFIGS:" ~/.vimrc
+then
+    echo "\" PERSONAL VIMRC CONFIGS:" >> ~/.vimrc
+    cat vimrc >> ~/.vimrc
+    echo "\" END PERSONAL CONFIGS" >> ~/.vimrc
+fi
+# Copy .vim structure
 cp -r .vim ~/.vim
 
 # Reload keybindings / mappings
@@ -36,7 +47,10 @@ then
     git config --global user.email "andrewchau333@gmail.com"
     git config --global user.name "Andrew Chau"
 else 
-    cp gitless-vimrc ~/.vimrc
+    sed '/\" PERSONAL VIMRC CONFIGS/,/\" END PERSONAL CONFIGS/d' ~/.vimrc
+    echo "\" PERSONAL VIMRC CONFIGS:" >> ~/.vimrc
+    cat gitless-vimrc >> ~/.vimrc
+    echo "\" END PERSONAL CONFIGS" >> ~/.vimrc
 fi
 
-
+echo "Finished Installing Andrew Chau's Linux Configurations!"
