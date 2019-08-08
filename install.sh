@@ -53,4 +53,4 @@ else
     echo "\" END PERSONAL CONFIGS" >> ~/.vimrc
 fi
 
-echo "Finished Installing Andrew Chau's Linux Configurations!"
+echo "Finished Installing Linux Configurations!"
