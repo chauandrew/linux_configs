@@ -23,7 +23,7 @@ then
     echo "\" END PERSONAL CONFIGS" >> ~/.vimrc
 fi
 # Copy .vim structure
-cp -r .vim ~/.vim
+cp -r .vim ~/
 
 # Reload keybindings / mappings
 source ~/.bashrc
