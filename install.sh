@@ -53,4 +53,5 @@ else
     echo "\" END PERSONAL CONFIGS" >> ~/.vimrc
 fi
 
-echo "Finished Installing Linux Configurations!"
+echo "Successfully installed personal configurations!"
+echo "Restart shell to finish setting up configurations"
