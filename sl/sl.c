@@ -41,6 +41,8 @@
 #include <curses.h>
 #include <signal.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <time.h>
 #include "sl.h"
 
 void add_smoke(int y, int x);
@@ -83,6 +85,8 @@ void option(char *str)
 int main(int argc, char *argv[])
 {
     int x, i;
+    srand((unsigned) time(0)); // random speed
+    int speed = ((rand() % 32) + 1) << 10;
 
     for (i = 1; i < argc; ++i) {
         if (*argv[i] == '-') {
@@ -109,7 +113,7 @@ int main(int argc, char *argv[])
         }
         getch();
         refresh();
-        usleep(40000);
+        usleep(speed);
     }
     mvcur(0, COLS - 1, LINES - 1, 0);
     endwin();

@@ -28,5 +28,6 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 
-# important things
-alias sl="sl -la"
+# use random sl flags
+FLAGS=("-f" "-c" "-l" "-a" "-la" "-fa" "-ca" "-lf" "-cf" "-laf" "-caf")
+alias sl="sl ${FLAGS[ $RANDOM % ${#FLAGS[@]}]}"
