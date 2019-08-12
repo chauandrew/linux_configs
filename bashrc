@@ -31,3 +31,8 @@ export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 # use random sl flags
 FLAGS=("-f" "-c" "-l" "-a" "-la" "-fa" "-ca" "-lf" "-cf" "-laf" "-caf")
 alias sl="sl ${FLAGS[ $RANDOM % ${#FLAGS[@]}]}"
+
+alias emacs="echo Did you mean 'vim'? | lolcat -h 1.0; sleep 0.5; vim"
+alias nano="echo Did you mean 'vim'? | lolcat -h 1.0; sleep 0.5; vim"
+alias pico="echo Did you mean 'vim'? | lolcat -h 1.0; sleep 0.5; vim"
+

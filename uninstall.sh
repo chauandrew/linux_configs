@@ -14,6 +14,7 @@ bind -f ~/.inputrc
 
 # Remove sl
 rm $HOME/.local/bin/sl
+rm $HOME/.local/bin/lolcat
 
 echo "Successfully uninstalled personal configurations!"
 echo "Restart shell to reconfigure your shell!"

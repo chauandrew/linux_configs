@@ -55,8 +55,9 @@ fi
 
 # Install sl
 mkdir -p $HOME/.local/bin
-cd sl
+cd src 
 gcc -O -Wall -o $HOME/.local/bin/sl sl.c -lncurses
+gcc -std=c11 -O -Wall lolcat.c -o $HOME/.local/bin/lolcat
 cd - > /dev/null
 
 
