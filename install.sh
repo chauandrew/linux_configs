@@ -53,5 +53,12 @@ else
     echo "\" END PERSONAL CONFIGS" >> ~/.vimrc
 fi
 
+# Install sl
+mkdir -p $HOME/.local/bin
+cd sl
+gcc -O -Wall -o $HOME/.local/bin/sl sl.c -lncurses
+cd - > /dev/null
+
+
 echo "Successfully installed personal configurations!"
 echo "Restart shell to finish setting up configurations"

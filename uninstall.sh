@@ -12,5 +12,8 @@ rm -rf ~/.vim/bundle
 source ~/.bashrc
 bind -f ~/.inputrc
 
+# Remove sl
+rm $HOME/.local/bin/sl
+
 echo "Successfully uninstalled personal configurations!"
 echo "Restart shell to reconfigure your shell!"
