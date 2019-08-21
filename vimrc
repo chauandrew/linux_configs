@@ -7,7 +7,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 "Plugin 'valloric/youcompleteme'
-Plugin 'sheerun/vim-polyglot'
+"Plugin 'sheerun/vim-polyglot'
 Plugin 'ap/vim-buftabline'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'

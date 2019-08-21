@@ -82,11 +82,15 @@ void option(char *str)
     }
 }
 
+int cube(int x) {
+    return x * x * x;
+}
+
 int main(int argc, char *argv[])
 {
     int x, i;
     srand((unsigned) time(0)); // random speed
-    int speed = ((rand() % 32) + 1) << 10;
+    int speed = (cube(rand() % 7) + 1) << 8;
 
     for (i = 1; i < argc; ++i) {
         if (*argv[i] == '-') {
