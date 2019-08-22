@@ -1,0 +1,32 @@
+#!/bin/bash
+exec < /dev/tty
+
+# Get cursor position
+oldstty=$(stty -g)
+stty raw -echo min 0
+echo -en "\033[6n" > /dev/tty
+# tput u7 > /dev/tty    # when TERM=xterm (and relatives)
+IFS=';' read -r -d R -a pos
+stty $oldstty
+# change from one-based to zero based so they work with: tput cup $row $col
+row=$((${pos[0]:2} - 1))    # strip off the esc-[
+col=$((${pos[1]}))
+
+trap 'tput cup $row; tput dl 35; cat gyrados.txt; echo Finished!; exit 0' SIGINT
+
+
+
+while true
+do
+    tput cup $row 
+    tput dl 35
+    cat lokarp.txt
+    printf "Loading..."
+    sleep 1
+    tput cup $row 
+    tput dl 35
+    cat hikarp.txt
+    printf "Loading..."
+    sleep 1
+done
+
