@@ -23,6 +23,7 @@ let g:polyglot_disabled=['jsx']
 let g:airline_theme='onedark'
 
 " Personal Settings
+set colorcolumn=80
 noremap <Space> <Nop>
 let mapleader=" "
 set number! relativenumber!
