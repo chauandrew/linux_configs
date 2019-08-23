@@ -53,11 +53,12 @@ else
     echo "\" END PERSONAL CONFIGS" >> ~/.vimrc
 fi
 
-# Install sl
+# Install sl, lolcat, karpspinner
 mkdir -p $HOME/.local/bin
 cd src 
 gcc -O -Wall -o $HOME/.local/bin/sl sl.c -lncurses
 gcc -std=c11 -O -Wall lolcat.c -o $HOME/.local/bin/lolcat
+cp karpspinner $HOME/.local/bin/karpspinner   
 cd - > /dev/null
 
 
