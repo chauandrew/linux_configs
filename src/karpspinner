@@ -80,7 +80,7 @@ read -r -d '' hikarp << 'HIKARP'
 .
 .
 .
-. . Loading . .   
+. . Loading . . .
 HIKARP
 
 read -r -d '' lokarp << "LOKARP"
@@ -122,7 +122,7 @@ read -r -d '' lokarp << "LOKARP"
 .                                                       ▓▌▐▓Ç
 .                                                       ▀█▄▓█
 .                                                        ▐▓▓
-. . Loading . . .
+. . Loading . .
 LOKARP
 
 read -r -d '' gyrados << 'GYRADOS'
