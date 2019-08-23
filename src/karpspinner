@@ -42,9 +42,6 @@ col=$((${pos[1]}))
 
 # Ascii art images: 
 read -r -d '' hikarp << 'HIKARP'
-.
-.                                                                              
-.                                                                              
 .                                   ,▄▄                                        
 .                                   ▓▓▓▓▄                                      
 .                                   ▐▓▒╢▓▓▄                                    
@@ -72,6 +69,9 @@ read -r -d '' hikarp << 'HIKARP'
 .                                                       ▓▓░▓▓                  
 .                                                        ▀▓▓█                  
 .                                                                              
+.
+.
+.
 .
 .
 .
