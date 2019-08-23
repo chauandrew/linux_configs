@@ -1,4 +1,32 @@
 #!/bin/bash
+
+read -r -d '' usage << USAGE
+Usage: karpspinner [PID]
+Magikarp flops while you wait for a process to finish
+
+EXAMPLE: 'sleep 5 & karpspinner $!'
+USAGE
+
+# process long and short args 
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    "--help") set -- "$@" "-h" ;;
+	*) set -- "$@" "$arg";;
+  esac
+done
+
+while getopts v:d:rfht option
+do
+   case "${option}"
+   in
+   h) echo "$usage"; exit 0;;
+   esac
+done
+
+
+PID=$1
+
 exec < /dev/tty
 
 # Get cursor position
@@ -144,7 +172,7 @@ trap 'tput cup $row; tput dl 39; printf "$gyrados"; sleep 0.10; \
       tput cup $row; tput dl 39; exit 0' SIGINT
 
 # blink between lokarp and hikarp
-while true
+while [ -d /proc/$PID ]
 do
     tput cup $row 
     tput dl 39
@@ -156,3 +184,10 @@ do
     sleep 1
 done
 
+# flash gyrados and exit
+tput cup $row
+tput dl 39
+printf "$gyrados"
+sleep 0.10
+tput cup $row
+tput dl 39
