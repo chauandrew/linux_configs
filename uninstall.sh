@@ -12,9 +12,10 @@ rm -rf ~/.vim/bundle
 source ~/.bashrc
 bind -f ~/.inputrc
 
-# Remove sl
+# Remove sl, lolcat, karpspinner 
 rm $HOME/.local/bin/sl
 rm $HOME/.local/bin/lolcat
+rm $HOME/.local/bin/karpspinner
 
 echo "Successfully uninstalled personal configurations!"
 echo "Restart shell to reconfigure your shell!"
