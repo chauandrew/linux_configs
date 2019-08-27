@@ -12,7 +12,7 @@ TAB:menu-complete
 
 # Tab autocomplete settings
 set colored-stats On 
-set completion-ignore-case On 
+#set completion-ignore-case On 
 #set completion-prefix-display-length 5 
 set mark-symlinked-directories On 
 set visible-stats On
