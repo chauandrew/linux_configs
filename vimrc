@@ -6,18 +6,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'valloric/youcompleteme'
-"Plugin 'sheerun/vim-polyglot'
 Plugin 'ap/vim-buftabline'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'yggdroot/indentline'
 
 call vundle#end()
-filetype plugin indent on
 
 let g:polyglot_disabled=['jsx']
 let g:airline_theme='onedark'
@@ -27,7 +22,6 @@ set colorcolumn=80
 noremap <Space> <Nop>
 let mapleader=" "
 set number! relativenumber!
-syntax on
 colorscheme onedark
 "colorscheme molokai
 "colorscheme monokai
@@ -52,7 +46,7 @@ nnoremap <Leader>l :bn<CR>
 nnoremap <Leader>h :bp<CR>
 nnoremap bd: bp\|bd #<CR> 
 nnoremap bd!: bp!\|bd! #<CR> 
-set autowrite
+set hidden
 
 " Settings to toggle explorer
 let g:NetrwIsOpen=0
@@ -86,3 +80,9 @@ set nowrap
 set scrolloff=5
 set t_ut=""
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+map N Nzz
+map n nzz
+
+
+filetype plugin indent on
+syntax on
