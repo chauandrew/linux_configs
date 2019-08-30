@@ -16,6 +16,8 @@ call vundle#end()
 
 let g:polyglot_disabled=['jsx']
 let g:airline_theme='onedark'
+let g:indentLine_leadingSpaceChar='·'
+let g:indentLine_leadingSpaceEnabled=1
 
 " Personal Settings
 set colorcolumn=80
@@ -83,6 +85,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 map N Nzz
 map n nzz
 
-
+set list
+set listchars=eol:¬
 filetype plugin indent on
 syntax on
