@@ -15,6 +15,13 @@ then
     cat inputrc >> ~/.inputrc
     echo "# END PERSONAL CONFIGS" >> ~/.inputrc
 fi
+touch ~/.bash_profile
+if ! grep -q "# PERSONAL BASH_PROFILE CONFIGS:" ~/.bash_profile
+then
+    echo "# PERSONAL BASH_PROFILE CONFIGS:" >> ~/.bash_profile
+    cat bash_profile >> ~/.bash_profile
+    echo "# END PERSONAL CONFIGS" >> ~/.bash_profile
+fi
 touch ~/.vimrc
 if ! grep -q "\" PERSONAL VIMRC CONFIGS:" ~/.vimrc
 then

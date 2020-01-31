@@ -3,6 +3,7 @@
 # Remove personal bashrc/inputrc configs
 sed -i '/# PERSONAL BASHRC CONFIGS/,/# END PERSONAL CONFIGS/d' ~/.bashrc
 sed -i '/# PERSONAL INPUTRC CONFIGS/,/# END PERSONAL CONFIGS/d' ~/.inputrc
+sed -i '/# PERSONAL BASH_PROFILE CONFIGS/,/# END PERSONAL CONFIGS/d' ~/.bash_profile
 sed -i '/\" PERSONAL VIMRC CONFIGS/,/\" END PERSONAL CONFIGS/d' ~/.vimrc
 
 # Delete vimrc plugin files
