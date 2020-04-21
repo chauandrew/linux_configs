@@ -1,5 +1,10 @@
+" PERSONAL VIMRC CONFIGS:
 set nocompatible
 filetype off
+
+" Leader 
+noremap <Space> <Nop>
+let mapleader=" "
 
 " Vundle / Plugin Stuff
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -11,25 +16,30 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'yggdroot/indentline'
+Plugin 'fatih/vim-go'
+Plugin 'preservim/nerdtree'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
+"Plugin Settings
 let g:polyglot_disabled=['jsx']
 let g:airline_theme='onedark'
 let g:indentLine_leadingSpaceChar='·'
 let g:indentLine_leadingSpaceEnabled=1
+let g:gitgutter_map_keys = 0
+nmap <Leader>ph <Plug>(GitGutterPreviewHunk)
 
-" Personal Settings
-set colorcolumn=80
-noremap <Space> <Nop>
-let mapleader=" "
-set number! relativenumber!
-colorscheme onedark
-"colorscheme molokai
-"colorscheme monokai
-set tabstop=4
-set shiftwidth=4
-set expandtab
+" NerdTree
+noremap <silent> <Leader>e :NERDTreeToggle<CR>
+autocmd BufEnter NERD_tree* :LeadingSpaceDisable
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+ "BufTabLine better coloring
+hi! link BufTabLineCurrent Visual
+hi! link BufTabLineActive TabLineSel
 
 " ctrl+j/k moves lines up or down
 let g:C_Ctrl_j = 'off'
@@ -50,42 +60,26 @@ nnoremap bd: bp\|bd #<CR>
 nnoremap bd!: bp!\|bd! #<CR> 
 set hidden
 
-" Settings to toggle explorer
-let g:NetrwIsOpen=0
-
-function! ToggleNetrw()
-    if g:NetrwIsOpen
-        let i = bufnr("$")
-        while (i >= 1)
-            if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i 
-            endif
-            let i-=1
-        endwhile
-        let g:NetrwIsOpen=0
-    else
-        let g:NetrwIsOpen=1
-        silent Vexplore
-    endif
-endfunction
-" Button to toggle explorer
-noremap <silent> <Leader>e :call ToggleNetrw()<CR>
-" Explorer settings
-let g:netrw_banner = 0
-let g:netrw_liststyle = 1
-let g:netrw_browse_split = 4 
-let g:netrw_altv = 1
-let g:netrw_winsize = 20 
-
 " etc
+set colorcolumn=80
+set number! relativenumber!
+colorscheme onedark
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
 set nowrap
 set scrolloff=5
-set t_ut=""
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+set t_ut=""         " Colorscheme stuff
+set hlsearch        " Highlight searches
+" Use Ctrl + l to clear highlighting
+nnoremap <silent> <C-l> :nohl<CR><C-l> 
+
 map N Nzz
 map n nzz
 
 set list
-set listchars=eol:¬
+set listchars=tab:\|\ ,eol:¬,space:·
 filetype plugin indent on
 syntax on
+" END PERSONAL CONFIGS
