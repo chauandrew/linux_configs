@@ -41,6 +41,19 @@ let NERDTreeDirArrows = 1
 hi! link BufTabLineCurrent Visual
 hi! link BufTabLineActive TabLineSel
 
+" Statusline stuff
+set laststatus=2
+set statusline=
+set statusline+=%#DiffAdd#  " Green color
+set statusline+=%-.50F\     " Filename up to 50 char
+set statusline+=%#CursorColumn#  " Bckgd color
+set statusline+=%=
+set statusline+=%h%y  " help, file type
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding} "File encoding
+"set statusline+=\[%{&fileformat}\] 
+set statusline+=\ Ln:%l/%L\ Col:%c " line/column number
+set statusline+=\ 
+
 " ctrl+j/k moves lines up or down
 let g:C_Ctrl_j = 'off'
 let g:C_Ctrl_h = 'off'
@@ -72,8 +85,9 @@ set nowrap
 set scrolloff=5
 set t_ut=""         " Colorscheme stuff
 set hlsearch        " Highlight searches
-" Use Ctrl + l to clear highlighting
+" Use Ctrl+l or Ctrl+[ to clear highlighting
 nnoremap <silent> <C-l> :nohl<CR><C-l> 
+nnoremap <silent> <C-[> :nohl<CR><C-[> 
 
 map N Nzz
 map n nzz
