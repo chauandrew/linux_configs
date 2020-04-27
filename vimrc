@@ -87,7 +87,6 @@ set t_ut=""         " Colorscheme stuff
 set hlsearch        " Highlight searches
 " Use Ctrl+l or Ctrl+[ to clear highlighting
 nnoremap <silent> <C-l> :nohl<CR><C-l> 
-nnoremap <silent> <C-[> :nohl<CR><C-[> 
 
 map N Nzz
 map n nzz
