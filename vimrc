@@ -69,8 +69,8 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Buffer settings
 nnoremap <Leader>l :bn<CR>
 nnoremap <Leader>h :bp<CR>
-nnoremap bd: bp\|bd #<CR> 
-nnoremap bd!: bp!\|bd! #<CR> 
+"nnoremap bd: bp\|bd #<CR> 
+"nnoremap bd!: bp!\|bd! #<CR> 
 set hidden
 
 " etc
