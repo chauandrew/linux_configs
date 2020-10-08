@@ -16,7 +16,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'yggdroot/indentline'
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 Plugin 'preservim/nerdtree'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
@@ -85,7 +85,7 @@ set nowrap
 set scrolloff=5
 set t_ut=""         " Colorscheme stuff
 set hlsearch        " Highlight searches
-" Use Ctrl+l or Ctrl+[ to clear highlighting
+" Use Ctrl+l to clear highlighting
 nnoremap <silent> <C-l> :nohl<CR><C-l> 
 
 map N Nzz
